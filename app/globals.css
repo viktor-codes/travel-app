@@ -1,26 +1,56 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-inter: 'Inter', sans-serif;
+	/* Colors */
+	--color-green-50: #30af5b;
+	--color-green-90: #292c27;
+
+	--color-gray-10: #eeeeee;
+	--color-gray-20: #a2a2a2;
+	--color-gray-30: #7b7b7b;
+	--color-gray-50: #585858;
+	--color-gray-90: #141414;
+
+	--color-orange-50: #ff814c;
+	--color-blue-70: #021639;
+	--color-yellow-50: #fec601;
+
+	/* Background images */
+	--background-image-bg-img-1: url('/img-1.png');
+	--background-image-bg-img-2: url('/img-2.png');
+	--background-image-feature-bg: url('/feature-bg.png');
+	--background-image-pattern: url('/pattern.png');
+	--background-image-pattern-2: url('/pattern-bg.png');
+
+	/* Screens */
+	--breakpoint-xs: 400px;
+	--breakpoint-3xl: 1680px;
+	--breakpoint-4xl: 2200px;
+
+	/* Max widths */
+	--max-w-10xl: 1512px;
+
+	/* Border radii */
+	--radius-5xl: 40px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-inter);
 }
