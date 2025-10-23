@@ -8,7 +8,7 @@
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
-	--font-inter: 'Inter', sans-serif;
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 	/* Colors */
 	--color-green-50: #30af5b;
 	--color-green-90: #292c27;
@@ -42,15 +42,181 @@
 	--radius-5xl: 40px;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root {
 		--background: #0a0a0a;
 		--foreground: #ededed;
 	}
-} */
+}
 
 body {
 	background: var(--background);
 	color: var(--foreground);
-	font-family: var(--font-inter);
+	font-family: var(--font-sans);
+}
+
+/* Custom Tailwind utilities */
+@layer utilities {
+	/* Buttons */
+	.btn_white {
+		@apply border-white bg-white px-8 py-3 text-green-50;
+	}
+	.btn_white_text {
+		@apply border-white bg-white px-8 py-3 text-gray-90;
+	}
+	.btn_green {
+		@apply border-green-50 bg-green-50 px-8 py-5 text-white;
+	}
+	.btn_dark_green {
+		@apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black;
+	}
+	.btn_dark_green_outline {
+		@apply border-gray-20 bg-green-90 px-8 py-5 text-white;
+	}
+
+	/* Containers */
+	/* .max-container {
+		@apply mx-auto max-w-[1440px];
+	}
+	.padding-container {
+		@apply px-6 lg:px-20 3xl:px-0;
+	} */
+
+	/* Flex helpers */
+	.flexCenter {
+		@apply flex items-center justify-center;
+	}
+
+	.flexBetween {
+		@apply flex items-center justify-between;
+	}
+
+	.flexStart {
+		@apply flex items-center justify-start;
+	}
+
+	.flexEnd {
+		@apply flex items-center justify-end;
+	}
+
+	/* FONTS */
+	.regular-64 {
+		@apply text-[64px] font-[400] leading-[120%];
+	}
+
+	.regular-40 {
+		@apply text-[40px] font-[400] leading-[120%];
+	}
+
+	.regular-32 {
+		@apply text-[32px] font-[400];
+	}
+
+	.regular-24 {
+		@apply text-[24px] font-[400];
+	}
+
+	.regular-20 {
+		@apply text-[20px] font-[400];
+	}
+
+	.regular-18 {
+		@apply text-[18px] font-[400];
+	}
+
+	.regular-16 {
+		@apply text-[16px] font-[400];
+	}
+
+	.regular-14 {
+		@apply text-[14px] font-[400];
+	}
+
+	.medium-14 {
+		@apply text-[14px] font-[600];
+	}
+
+	.bold-88 {
+		@apply text-[88px] font-[700] leading-[120%];
+	}
+
+	.bold-64 {
+		@apply text-[64px] font-[700] leading-[120%];
+	}
+
+	.bold-52 {
+		@apply text-[52px] font-[700] leading-[120%];
+	}
+
+	.bold-40 {
+		@apply text-[40px] font-[700] leading-[120%];
+	}
+
+	.bold-32 {
+		@apply text-[32px] font-[700] leading-[120%];
+	}
+
+	.bold-20 {
+		@apply text-[20px] font-[700];
+	}
+
+	.bold-18 {
+		@apply text-[18px] font-[700];
+	}
+
+	.bold-16 {
+		@apply text-[16px] font-[700];
+	}
+
+	/* Add other regular/bold classes as needed */
+
+	/* Sections */
+	.hero-map {
+		@apply absolute right-0 top-0 h-screen w-screen bg-pattern-2 bg-cover bg-center md:-right-28 xl:-top-60;
+	}
+	.camp-quote {
+		@apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
+	}
+	.feature-phone {
+		@apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex 3xl:left-20;
+	}
+	.get-app {
+		@apply relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+	}
+}
+
+/* Scrollbar helpers */
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+.hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.max-container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1440px;
+}
+
+.padding-container {
+	padding-left: 1.5rem; /* px-6 */
+	padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+	/* lg */
+	.padding-container {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+}
+
+@media (min-width: 1680px) {
+	/* 3xl */
+	.padding-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
