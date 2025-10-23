@@ -10,7 +10,7 @@ const Guide = () => {
 					we are here for you
 				</p>
 				<div className='flex flex-wrap justify-between gap-5 lg:gap-10'>
-					<h2 className='font-bold text-[40px] lg:text-[64px] xl:max-w-[390px]'>
+					<h2 className='font-bold text-[40px] lg:text-[64px] xl:max-w-[390px] leading-[120%] '>
 						Guide you to easy path
 					</h2>
 					<p className='text-base text-grey-30 xl:max-w-[520px]'>
