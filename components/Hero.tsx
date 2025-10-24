@@ -50,7 +50,7 @@ const Hero = () => {
 						type='button'
 						title='How we work?'
 						icon='/play.svg'
-						variant='btn_white-text'
+						variant='btn_white_text'
 					/>
 				</div>
 			</div>
