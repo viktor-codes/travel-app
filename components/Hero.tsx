@@ -4,14 +4,8 @@ import Button from './Button'
 
 const Hero = () => {
 	return (
-		<section className='relative max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row'>
-			<Image
-				src='/pattern-bg.webp'
-				alt='Hero background'
-				layout='fill' // fills the container
-				objectFit='cover' // maintain cover
-				priority // preload for LCP
-			/>
+		<section className='max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row'>
+			<div className='hero-map' />
 			{/* Left Side */}
 			<div className='relative z-20 flex flex-1 flex-col xl:w-1/2'>
 				<Image
