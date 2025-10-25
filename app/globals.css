@@ -25,10 +25,10 @@
 
 	/* Background images */
 	--background-image-bg-img-1: url('/img-1.webp');
-	--background-image-bg-img-2: url('/img-2.webp);
-	--background-image-feature-bg: url('/feature-bg.png');
-	--background-image-pattern: url('/pattern.png');
-	--background-image-pattern-2: url('/pattern-bg.png');
+	--background-image-bg-img-2: url('/img-2.webp');
+	--background-image-feature-bg: url('/feature-bg.webp');
+	--background-image-pattern: url('/pattern.webp');
+	--background-image-pattern-2: url('/pattern-bg.webp');
 
 	/* Screens */
 	--breakpoint-xs: 400px;
